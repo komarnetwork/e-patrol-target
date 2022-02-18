@@ -8,25 +8,25 @@ use Illuminate\Database\Seeder;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        //
-        // Seeder User
-        User::create([
-            'name' => 'Komarudin Islam',
-            'username' => 'komarudin',
-            'email' => 'komar.network@gmail.com',
-            'is_admin' => true,
-            'email_verified_at' => now(),
-            'password' => bcrypt('secret'),
-            'remember_token' => Str::random(10)
-        ]);
+   /**
+    * Run the database seeds.
+    *
+    * @return void
+    */
+   public function run()
+   {
+      //
+      // Seeder User
+      User::create([
+         'name' => 'komarudin',
+         'username' => 'komarudin',
+         'email' => 'komar.network@gmail.com',
+         'is_admin' => true,
+         'email_verified_at' => now(),
+         'password' => bcrypt('secret'),
+         'remember_token' => Str::random(10)
+      ]);
 
-        User::factory(3)->create();
-    }
+      User::factory(3)->create();
+   }
 }

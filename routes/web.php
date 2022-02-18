@@ -26,20 +26,20 @@ Route::view('/pages/slick', 'pages.slick');
 Route::view('/pages/blank', 'pages.blank');
 
 Route::middleware(['guest'])->group(function () {
-    Route::get('/login', [LoginController::class, 'index'])->name('login');
-    Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
-    Route::get('/register', [RegisterController::class, 'index'])->name('register');
-    Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+   Route::get('/login', [LoginController::class, 'index'])->name('login');
+   Route::post('/login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+   Route::get('/register', [RegisterController::class, 'index'])->name('register');
+   Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 });
 
 
 // ! Dashboard Admin
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+   Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+   Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-    Route::resource('pages/userlist', UserController::class);
-    Route::resource('pages/absen', AbsenController::class);
-    Route::resource('pages/asset', AssetController::class);
-    // Route::post('/pages/userlist/store', [UserController::class, 'store']);
+   Route::resource('pages/userlist', UserController::class);
+   Route::resource('pages/absen', AbsenController::class);
+   Route::resource('pages/asset', AssetController::class);
+   // Route::post('/pages/userlist/store', [UserController::class, 'store']);
 });

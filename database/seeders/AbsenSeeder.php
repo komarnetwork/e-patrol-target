@@ -7,14 +7,14 @@ use Illuminate\Database\Seeder;
 
 class AbsenSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        //
-        Absen::factory(3)->create();
-    }
+   /**
+    * Run the database seeds.
+    *
+    * @return void
+    */
+   public function run()
+   {
+      //
+      Absen::factory(3)->create();
+   }
 }

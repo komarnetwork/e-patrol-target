@@ -7,7 +7,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
 
 /*!
  * dashmix - v5.1.0
@@ -31,20 +31,19 @@ Dashmix.onLoad( /*#__PURE__*/function () {
           input: "form-control"
         }
       });
-    //   document.querySelector(".js-swal-simple").addEventListener("click", function (t) {
-    //     e.fire("Hi, this is just a simple message!");
-    //   }), document.querySelector(".js-swal-success").addEventListener("click", function (t) {
-    //     e.fire("Success", "Everything was updated perfectly!", "success");
-    //   }), document.querySelector(".js-swal-info").addEventListener("click", function (t) {
-    //     e.fire("Info", "Just an informational message!", "info");
-    //   }), document.querySelector(".js-swal-warning").addEventListener("click", function (t) {
-    //     e.fire("Warning", "Something needs your attention!", "warning");
-    //   }), document.querySelector(".js-swal-error").addEventListener("click", function (t) {
-    //     e.fire("Oops...", "Something went wrong!", "error");
-    //   }), document.querySelector(".js-swal-question").addEventListener("click", function (t) {
-    //     e.fire("Question", "Are you sure about that?", "question");
-    //   }),
-      document.querySelector(".js-swal-confirm").addEventListener("click", function (t) {
+      document.querySelector(".js-swal-simple").addEventListener("click", function (t) {
+        e.fire("Hi, this is just a simple message!");
+      }), document.querySelector(".js-swal-success").addEventListener("click", function (t) {
+        e.fire("Success", "Everything was updated perfectly!", "success");
+      }), document.querySelector(".js-swal-info").addEventListener("click", function (t) {
+        e.fire("Info", "Just an informational message!", "info");
+      }), document.querySelector(".js-swal-warning").addEventListener("click", function (t) {
+        e.fire("Warning", "Something needs your attention!", "warning");
+      }), document.querySelector(".js-swal-error").addEventListener("click", function (t) {
+        e.fire("Oops...", "Something went wrong!", "error");
+      }), document.querySelector(".js-swal-question").addEventListener("click", function (t) {
+        e.fire("Question", "Are you sure about that?", "question");
+      }), document.querySelector(".js-swal-confirm").addEventListener("click", function (t) {
         e.fire({
           title: "Are you sure?",
           text: "You will not be able to recover this imaginary file!",

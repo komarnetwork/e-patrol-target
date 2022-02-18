@@ -6,30 +6,30 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateAssetsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up()
-    {
-        Schema::create('assets', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama_asset');
-            $table->string('lokasi_point');
-            $table->string('deskripsi');
-            $table->string('jenis_asset');
-            $table->timestamps();
-        });
-    }
+   /**
+    * Run the migrations.
+    *
+    * @return void
+    */
+   public function up()
+   {
+      Schema::create('assets', function (Blueprint $table) {
+         $table->id();
+         $table->string('nama_asset');
+         $table->string('lokasi_point');
+         $table->string('deskripsi');
+         $table->string('jenis_asset');
+         $table->timestamps();
+      });
+   }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down()
-    {
-        Schema::dropIfExists('assets');
-    }
+   /**
+    * Reverse the migrations.
+    *
+    * @return void
+    */
+   public function down()
+   {
+      Schema::dropIfExists('assets');
+   }
 }
